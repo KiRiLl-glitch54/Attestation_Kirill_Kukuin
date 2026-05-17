@@ -34,7 +34,6 @@ def add_new_book():
         print(f"Ошибка при добавлении книги: {e}")
 
 def show_all_books():
-    """Displays all books currently in storage."""
     print("\n--- Все книги ---")
     books = get_all_books()
     if not books:
@@ -53,7 +52,6 @@ def show_average_rating():
         print(f"Средняя оценка всех книг: {avg_rating:.2f}")
 
 def show_author_statistics():
-    """Displays statistics for each author."""
     print("\n--- Статистика по авторам ---")
     stats = get_author_statistics()
     if not stats:
@@ -65,13 +63,11 @@ def show_author_statistics():
         print(f"  Средняя оценка: {data['average_rating']:.2f}")
 
 def delete_book():
-    """Prompts for a book title and removes it."""
     print("\n--- Удалить книгу ---")
     title_to_remove = input("Введите название книги для удаления: ")
     remove_book(title_to_remove)
 
 def main():
-    """Main function to run the application."""
     while True:
         display_menu()
         choice = input("Выберите опцию: ")
