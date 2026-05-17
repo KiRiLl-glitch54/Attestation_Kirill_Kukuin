@@ -53,12 +53,43 @@ def show_average_rating():
         print(f"Средняя оценка всех книг: {avg_rating:.2f}")
 
 def show_author_statistics():
-    pass
+    """Displays statistics for each author."""
+    print("\n--- Статистика по авторам ---")
+    stats = get_author_statistics()
+    if not stats:
+        print("Нет книг для статистики по авторам.")
+        return
+    for author, data in stats.items():
+        print(f"Автор: {author}")
+        print(f"  Всего книг: {data['total_books']}")
+        print(f"  Средняя оценка: {data['average_rating']:.2f}")
 
 def delete_book():
-    pass
+    """Prompts for a book title and removes it."""
+    print("\n--- Удалить книгу ---")
+    title_to_remove = input("Введите название книги для удаления: ")
+    remove_book(title_to_remove)
 
 def main():
-    pass
+    """Main function to run the application."""
+    while True:
+        display_menu()
+        choice = input("Выберите опцию: ")
+
+        if choice == '1':
+            add_new_book()
+        elif choice == '2':
+            show_all_books()
+        elif choice == '3':
+            show_average_rating()
+        elif choice == '4':
+            show_author_statistics()
+        elif choice == '5':
+            delete_book()
+        elif choice == '6':
+            print("Выход из приложения. До свидания!")
+            break
+        else:
+            print("Неверный выбор. Пожалуйста, попробуйте еще раз.")
 
 main()
