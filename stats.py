@@ -3,7 +3,6 @@ import collections
 
 
 def calculate_average_rating() -> float:
-    # Assuming get_all_books is available in the global scope after previous cell execution
     books = get_all_books()
     if not books:
         return 0.0
@@ -11,7 +10,6 @@ def calculate_average_rating() -> float:
     return total_rating / len(books)
 
 def get_author_statistics() -> Dict[str, Dict[str, float]]:
-    # Assuming get_all_books is available in the global scope after previous cell execution
     books = get_all_books()
     author_stats = collections.defaultdict(lambda: {'total_books': 0, 'total_rating': 0})
 
