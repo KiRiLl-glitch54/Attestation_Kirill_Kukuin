@@ -21,6 +21,10 @@ def _save_books(books: List[Book]):
 
 def add_book(book: Book):
     books = _load_books()
+    if any(b.title.lower() == book.title.lower() and b.author.lower() == book.author.lower() for b in books):
+        print(f"Книга под названием '{book.title}' под авторством {book.author} уже существует в библиотеке.")
+        return
+
     books.append(book)
     _save_books(books)
     print(f"Книга под названием '{book.title}' под авторством {book.author} добавлена.")
