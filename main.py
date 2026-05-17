@@ -23,7 +23,7 @@ def add_new_book():
             break
         except ValueError:
             print("Неверная оценка. Введите число от 1 до 5.")
-    read_date = input("Дата прочтения (YYYY-MM-DD, оставьте пустым для сегодняшней даты): ")
+    read_date = input("Дата прочтения (ГГГГ-MM-ДД, оставьте пустым для сегодняшней даты): ")
     if not read_date:
         read_date = datetime.date.today().isoformat()
     
