@@ -29,4 +29,4 @@ class Book:
         )
 
     def __repr__(self) -> str:
-        return f"Book(author='{self.author}', title='{self.title}', rating={self.rating}, read_date='{self.read_date}')"
+        return f"Книга(author='{self.author}', title='{self.title}', rating={self.rating}, read_date='{self.read_date}')"
