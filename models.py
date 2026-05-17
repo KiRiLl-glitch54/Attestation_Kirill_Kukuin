@@ -8,7 +8,6 @@ class Book:
         self.author = author
         self.title = title
         self.rating = rating
-        # Store date as string for simplicity with JSON, assume ISO format for input
         self.read_date = read_date
 
     def to_dict(self) -> dict:
