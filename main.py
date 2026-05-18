@@ -2,7 +2,7 @@ import datetime
 
 
 def display_menu():
-    print("\n--- Book Management App ---")
+    print("\n--- Трекер прочитанных книг ---")
     print("1. Добавить книгу")
     print("2. Показать все книги")
     print("3. Показать среднюю оценку")
