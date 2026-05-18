@@ -40,7 +40,7 @@ def show_all_books():
         print("Библиотека пуста.")
         return
     for i, book in enumerate(books, 1):
-        print(f"{i}. {book.title} by {book.author}, Rating: {book.rating}, Read: {book.read_date}")
+        print(f"{i}. {book.title} от {book.author}, Рейтинг: {book.rating}, Прочтено: {book.read_date}")
 
 def show_average_rating():
     """Displays the average rating of all books."""
